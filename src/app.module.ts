@@ -5,14 +5,16 @@ import { EmailSubscriptionModule } from './Routes/emailsubscriptions/email-subsc
 import { AnalyticsModule } from './Routes/analytics/analytics.modules';
 import { AuthModule } from './auth/auth.module';
 import { SeedModule } from './adminseed/adminseed.module';
+import { AppController } from './demo.con';
+import { DemoService } from './demo.serv';
 
 @Module({
 
   imports: [DatabaseModule, ContactRequestsModule, EmailSubscriptionModule, AnalyticsModule, AuthModule, SeedModule],
 
-  controllers: [],
+  controllers: [AppController],
 
-  providers: [],
+  providers: [DemoService],
 
 })
 export class AppModule { }
